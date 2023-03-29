@@ -7,7 +7,7 @@ def config_csv(arxiu, i):
         for linia,valor in enumerate(reader):
             if linia == i:
                 camps = len(valor)
-                return valor[0], camps
+                return valor
 
 
 #Imprimir info d'arxiu csv
