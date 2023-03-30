@@ -6,7 +6,6 @@ def config_csv(arxiu, i):
         reader = csv.reader(csvfile, delimiter=":")
         for linia,valor in enumerate(reader):
             if linia == i:
-                camps = len(valor)
                 return valor
 
 
