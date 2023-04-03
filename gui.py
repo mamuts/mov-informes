@@ -1,7 +1,5 @@
 from tkinter import *
-from tkinter import filedialog as FileDialog
-from tkinter.ttk import Treeview
-from ui.nou import nou
+from ui.nou import *
 
 class CenterWidgetMixin:
     def center(self):
@@ -27,7 +25,7 @@ class MainWindow(Tk, CenterWidgetMixin):
 
         filemenu = Menu(menubar, tearoff=0)
         filemenu.add_command(label="Nou", command=nou)
-        filemenu.add_command(label="Abrir")
+        filemenu.add_command(label="Obrir", command=obrir)
         filemenu.add_command(label="Guardar")
         filemenu.add_command(label="Cerrar")
         filemenu.add_separator()
