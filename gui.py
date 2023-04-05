@@ -1,5 +1,6 @@
 from tkinter import *
 from ui.nou import *
+from ui.obrir import *
 
 class CenterWidgetMixin:
     def center(self):
@@ -17,6 +18,7 @@ class MainWindow(Tk, CenterWidgetMixin):
         super().__init__()
         self.title("Gestor d'informes de moviments bancaris")
         self.geometry("800x600")
+        self.center()
         self.build()
 
     def build(self):
@@ -24,8 +26,8 @@ class MainWindow(Tk, CenterWidgetMixin):
         self.config(menu=menubar)
 
         filemenu = Menu(menubar, tearoff=0)
-        filemenu.add_command(label="Nou", command=nou)
-        filemenu.add_command(label="Obrir", command=obrir)
+        filemenu.add_command(label="Nou", command= lambda : [nou(self)])
+        filemenu.add_command(label="Obrir", command=lambda : [obrir(self)])
         filemenu.add_command(label="Guardar")
         filemenu.add_command(label="Cerrar")
         filemenu.add_separator()
